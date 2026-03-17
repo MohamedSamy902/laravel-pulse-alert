@@ -26,6 +26,11 @@ class PulseAlertServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // تسجيل الـ Middleware تلقائياً في مجموعات الويب والـ API
+        $router = $this->app['router'];
+        $router->pushMiddlewareToGroup('web', PulseAlertRateLimit::class);
+        $router->pushMiddlewareToGroup('api', PulseAlertRateLimit::class);
+
         // نشر الملفات (Publishing)
         if ($this->app->runningInConsole()) {
             $this->publishResources();

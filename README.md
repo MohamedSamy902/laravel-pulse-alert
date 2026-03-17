@@ -78,19 +78,8 @@ Schedule::command('pulse-alert:daily-report')->dailyAt('08:00');
 
 ## 📖 Usage
 
-### Traffic Surveillance Middleware
-You can protect specific routes or groups from suspicious traffic using the provided middleware:
-
-```php
-// On a single route
-Route::middleware(['pulse-alert.rate'])->post('/api/login', ...);
-
-// On a group
-Route::middleware(['pulse-alert.rate'])->group(function () {
-    Route::post('/api/payment', ...);
-    Route::post('/api/sensitive-data', ...);
-});
-```
+### Automatic Traffic Surveillance
+The package automatically registers its rate-limiting middleware globally. All requests (Web, API, Dashboard) are monitored by default using the settings in your config file.
 
 ### Manual Logging
 You can manually log errors with a specific priority if needed:

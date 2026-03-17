@@ -76,19 +76,8 @@ Schedule::command('pulse-alert:daily-report')->dailyAt('08:00');
 
 ## 📖 الاستخدام
 
-### "Middleware" مراقبة حركة المرور
-يمكنك حماية مسارات معينة من الطلبات المشبوهة باستخدام الـ middleware المرفق:
-
-```php
-// على مسار واحد
-Route::middleware(['pulse-alert.rate'])->post('/api/login', ...);
-
-// على مجموعة مسارات
-Route::middleware(['pulse-alert.rate'])->group(function () {
-    Route::post('/api/payment', ...);
-    Route::post('/api/sensitive-data', ...);
-});
-```
+### مراقبة حركة المرور تلقائياً
+تقوم الحزمة بتسجيل الـ middleware الخاص بها تلقائياً بشكل عالمي. جميع الطلبات (Web, API, Dashboard) تخضع للمراقبة افتراضياً باستخدام الإعدادات الموجودة في ملف الـ config.
 
 ### التسجيل اليدوي
 يمكنك تسجيل الأخطاء يدوياً مع تحديد الأولوية إذا لزم الأمر:
