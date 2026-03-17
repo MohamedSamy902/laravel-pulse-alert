@@ -1,0 +1,45 @@
+{
+    "name": "mohamedsamy902/laravel-pulse-alert",
+    "description": "A zero-configuration Laravel package for real-time error monitoring, Telegram alerts, daily email reports, and suspicious traffic detection.",
+    "keywords": ["laravel", "monitoring", "error", "telegram", "alerts", "logging", "pulse"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Samy",
+            "email": "your@email.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/mail": "^11.0|^12.0",
+        "illuminate/queue": "^11.0|^12.0",
+        "illuminate/bus": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MohamedSamy902\\PulseAlert\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MohamedSamy902\\PulseAlert\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MohamedSamy902\\PulseAlert\\PulseAlertServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
