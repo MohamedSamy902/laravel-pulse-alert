@@ -45,6 +45,8 @@ Add these keys to your `.env` file:
 | `PULSE_ALERT_TELEGRAM_TOKEN` | Your Telegram Bot Token (@BotFather) | `null` |
 | `PULSE_ALERT_TELEGRAM_CHAT_ID` | Your Telegram Chat/Group ID | `null` |
 | `PULSE_ALERT_TELEGRAM_ENABLED` | Toggle Telegram alerts | `true` |
+| `PULSE_ALERT_TELEGRAM_QUEUE` | Set `false` for instant delivery without Worker | `false` |
+| `PULSE_ALERT_LOCALE` | Message language (`en` or `ar`) | `en` |
 | `PULSE_ALERT_MAIL_TO` | Recipient for daily reports | `null` |
 | `PULSE_ALERT_MAIL_ENABLED` | Toggle email reports | `true` |
 | `PULSE_ALERT_REPORT_TIME` | Departure time for daily report | `08:00` |

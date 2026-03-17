@@ -52,7 +52,12 @@ class ErrorLogger
 
             // إرسال تنبيه فوري إذا كانت الأولوية عالية
             if (in_array($priority, config('pulse-alert.priorities.instant_notify'))) {
-                SendTelegramAlert::dispatch($log)->onQueue('notifications');
+                if (config('pulse-alert.telegram.queue_enabled')) {
+                    SendTelegramAlert::dispatch($log)->onQueue('notifications');
+                } else {
+                    TelegramNotifier::send($log);
+                    $log->update(['notified' => true]);
+                }
             }
 
         } catch (\Exception $ex) {

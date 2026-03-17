@@ -9,7 +9,9 @@ return [
         'bot_token' => env('PULSE_ALERT_TELEGRAM_TOKEN'),
         'chat_id'   => env('PULSE_ALERT_TELEGRAM_CHAT_ID'),
         'enabled'   => env('PULSE_ALERT_TELEGRAM_ENABLED', true),
+        'queue_enabled' => env('PULSE_ALERT_TELEGRAM_QUEUE', false),
     ],
+    'locale' => env('PULSE_ALERT_LOCALE', 'en'),
     'mail' => [
         'to'      => env('PULSE_ALERT_MAIL_TO'),
         'enabled' => env('PULSE_ALERT_MAIL_ENABLED', true),
