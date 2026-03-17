@@ -1,5 +1,7 @@
 # ⚡ Laravel Pulse Alert
 
+[Arabic Version (النسخة العربية)](README_AR.md)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mohamedsamy902/laravel-pulse-alert.svg)](https://packagist.org/packages/mohamedsamy902/laravel-pulse-alert)
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue)](https://php.net)
 [![Laravel Version](https://img.shields.io/badge/Laravel-11%7C12-red)](https://laravel.com)

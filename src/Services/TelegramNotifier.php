@@ -50,6 +50,10 @@ class TelegramNotifier
             'parse_mode' => 'HTML',
         ]);
 
+        if (!$response->successful()) {
+            \Illuminate\Support\Facades\Log::error("PulseAlert Telegram API Error: " . $response->body());
+        }
+
         return $response->successful();
     }
 }
